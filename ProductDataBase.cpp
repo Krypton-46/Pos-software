@@ -62,13 +62,14 @@ void ProductDataBase::removeProduct(const string &n)
 	{
 		if (data[i].getName() == n)
 			break;
+		i++;
 	}
 	if (i == noOfProducts)
 	{
 		cout << "\nProduct not Found ";
 		return;
 	}
-	for (i; i < noOfProducts; i++)
+	for (i; i < noOfProducts-1; i++)
 		data[i] = data[i + 1];
 	noOfProducts--;
 	cout << "\nProduct Removed Successfully ";
