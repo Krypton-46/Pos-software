@@ -39,7 +39,23 @@ void ProductDataBase::addProduct()
 	noOfProducts++;
 }
 
-void ProductDataBase::removeProduct(string n)
+void ProductDataBase::addProduct(const Product& p)
+{
+	reSize(noOfProducts + 1);
+	data[noOfProducts] = p;
+	noOfProducts++;
+}
+void ProductDataBase::displayAllProducts()const
+{
+	for (int i = 0; i < noOfProducts; i++)
+	{
+		cout << data[i].getName()<<'\n';
+		cout << data[i].getPrice() << '\n';
+		cout << data[i].getQuantity() << '\n';
+	}
+}
+
+void ProductDataBase::removeProduct(const string &n)
 {
 	int i = 0;
 	while (i < noOfProducts)
@@ -55,6 +71,7 @@ void ProductDataBase::removeProduct(string n)
 	for (i; i < noOfProducts; i++)
 		data[i] = data[i + 1];
 	noOfProducts--;
+	cout << "\nProduct Removed Successfully ";
 }
 
 int ProductDataBase::getnoOfProducts()const

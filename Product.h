@@ -16,5 +16,6 @@ public:
 	void setPrice(int);
 	string getName()const;
 	int getPrice()const;
+	int getQuantity()const;
 };
 #endif // !PRODUCT_H

@@ -131,6 +131,7 @@
     <ClInclude Include="ProductDataBase.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Product.cpp" />
     <ClCompile Include="ProductDataBase.cpp" />
   </ItemGroup>

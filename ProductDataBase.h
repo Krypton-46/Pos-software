@@ -9,7 +9,9 @@ public:
 	ProductDataBase();
 	void reSize(int);
 	void addProduct();
-	void removeProduct(string);
+	void addProduct(const Product &);
+	void removeProduct(const string &);
 	int getnoOfProducts()const;
+	void displayAllProducts()const;
 };
 #endif // !PRODUCT_DATABASE_H

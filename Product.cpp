@@ -2,8 +2,10 @@
 Product::Product()
 {
 	price = 0;
+	name = "";
+	quantity = 0;
 }
-Product::Product(string n, int p,int q)
+Product::Product(string n, int p,int q):Product()
 {
 	name = n;
 	price = p;
@@ -21,7 +23,8 @@ void Product::setName(string n)
 }
 void Product::setPrice(int p)
 {
-	price = p;
+	if(p>0)
+		price = p;
 }
 
 string Product::getName()const
@@ -32,11 +35,7 @@ int Product::getPrice()const
 {
 	return price;
 }
-
-
-
-int main()
+int Product::getQuantity()const
 {
-	Product p("3 Door Blue", 40000,5);
-	cout << p.getName() << p.getPrice();
+	return quantity;
 }
