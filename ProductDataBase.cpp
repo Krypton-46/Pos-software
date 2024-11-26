@@ -26,11 +26,14 @@ void ProductDataBase::addProduct()
 {
 	string name;
 	int price;
+	int quantity;
 	cout << "\nEnter Product Name: ";
 	cin >> name;
 	cout << "\nEnter Product Price: ";
 	cin >> price;
-	Product p(name,price);
+	cout << "\nEnter Quantity: ";
+	cin >> quantity;
+	Product p(name,price,quantity);
 	reSize(noOfProducts + 1);
 	data[noOfProducts] = p;
 	noOfProducts++;
