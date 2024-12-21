@@ -84,3 +84,12 @@ int ProductDataBase::getnoOfProducts()const
 {
 	return noOfProducts;
 }
+
+ProductDataBase::~ProductDataBase()
+{
+	delete data;
+	data = nullptr;
+	noOfProducts = 0;
+	size = 0;
+}
+

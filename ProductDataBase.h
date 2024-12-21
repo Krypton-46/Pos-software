@@ -14,5 +14,6 @@ public:
 	void removeProduct(const string &);
 	int getnoOfProducts()const;
 	void displayAllProducts()const;
+	~ProductDataBase();
 };
 #endif // !PRODUCT_DATABASE_H
