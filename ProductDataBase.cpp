@@ -3,6 +3,7 @@ ProductDataBase::ProductDataBase()
 {
 	data = nullptr;
 	noOfProducts = 0;
+	size = 0;
 }
 
 void ProductDataBase::reSize(int newSize)
@@ -35,7 +36,10 @@ void ProductDataBase::addProduct()
 	cout << "\nEnter Quantity: ";
 	cin >> quantity;
 	Product p(name,price,quantity);
-	reSize(noOfProducts + 1);
+	if (size == 0)
+		reSize(2);
+	else if(noOfProducts==size-1)
+		reSize(noOfProducts * 2);
 	data[noOfProducts] = p;
 	noOfProducts++;
 }

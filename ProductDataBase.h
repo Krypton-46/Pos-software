@@ -5,6 +5,7 @@ class ProductDataBase
 {
 	Product* data;
 	int noOfProducts;
+	int size;
 public:
 	ProductDataBase();
 	void reSize(int);
