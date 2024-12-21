@@ -9,7 +9,7 @@ public:
 	ProductDataBase();
 	void reSize(int);
 	void addProduct();
-	void addProduct(const Product &);
+	//void addProduct(const Product &);
 	void removeProduct(const string &);
 	int getnoOfProducts()const;
 	void displayAllProducts()const;

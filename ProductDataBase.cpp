@@ -8,7 +8,8 @@ ProductDataBase::ProductDataBase()
 void ProductDataBase::reSize(int newSize)
 {
 	if (newSize == 0)
-	{	data = nullptr;
+	{	
+		data = nullptr;
 		return;
 	}
 	Product* temp= new Product[newSize];
@@ -39,19 +40,19 @@ void ProductDataBase::addProduct()
 	noOfProducts++;
 }
 
-void ProductDataBase::addProduct(const Product& p)
-{
-	reSize(noOfProducts + 1);
-	data[noOfProducts] = p;
-	noOfProducts++;
-}
+//void ProductDataBase::addProduct(const Product& p)
+//{
+//	reSize(noOfProducts + 1);
+//	data[noOfProducts] = p;
+//	noOfProducts++;
+//}
 void ProductDataBase::displayAllProducts()const
 {
 	for (int i = 0; i < noOfProducts; i++)
 	{
-		cout << data[i].getName()<<'\n';
-		cout << data[i].getPrice() << '\n';
-		cout << data[i].getQuantity() << '\n';
+		cout << '\n'<<data[i].getName();
+		cout << '\n'<<data[i].getPrice() ;
+		cout << '\n'<< data[i].getQuantity();
 	}
 }
 

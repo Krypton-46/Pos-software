@@ -8,6 +8,7 @@ int main()
 	b.addProduct(q);
 	b.displayAllProducts();
 	b.removeProduct("musab");
+	b.addProduct();
 	b.displayAllProducts();
 	b.removeProduct("asad");
 	b.displayAllProducts();
